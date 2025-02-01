@@ -1,0 +1,20 @@
+using UnityEngine;
+
+public class Toggle : MonoBehaviour{
+    RectTransform rectum;
+    int count = 0;
+
+    void Start(){
+        rectum = GetComponent<RectTransform>();
+    }
+
+    public void moveToggle(){
+        if(count % 2 == 0){
+            rectum.anchoredPosition = new Vector2(-319, 70);
+            count ++;
+        } else {
+            rectum.anchoredPosition = new Vector2(188, 159);
+            count ++;
+        }
+    }
+}
